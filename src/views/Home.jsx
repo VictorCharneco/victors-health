@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { motion, useMotionValue, animate } from 'framer-motion'
 import calendarData from '../data/calendarData.json'
 
 export default function Home() {
@@ -12,12 +14,13 @@ export default function Home() {
     JSON.parse(localStorage.getItem('weightHistory')) || []
 
   const lastWeight =
-    weightHistory[weightHistory.length - 1]?.value
+    weightHistory[weightHistory.length - 1]?.value ?? null
 
-  const firstWeight = weightHistory[0]?.value
+  const firstWeight = weightHistory[0]?.value ?? null
+
   const diff =
-    firstWeight && lastWeight
-      ? (lastWeight - firstWeight).toFixed(1)
+    firstWeight !== null && lastWeight !== null
+      ? Number((lastWeight - firstWeight).toFixed(1))
       : null
 
   const workoutsThisWeek = countWeeklyWorkouts()
@@ -31,24 +34,14 @@ export default function Home() {
       <div style={styles.kpis}>
         <KPI
           label="Peso actual"
-          value={
-            lastWeight ? `${lastWeight} kg` : '—'
-          }
+          value={lastWeight}
+          suffix=" kg"
         />
         <KPI
           label="Cambio"
-          value={
-            diff
-              ? `${diff > 0 ? '+' : ''}${diff} kg`
-              : '—'
-          }
-          accent={
-            diff < 0
-              ? 'green'
-              : diff > 0
-              ? 'red'
-              : null
-          }
+          value={diff}
+          suffix=" kg"
+          signed
         />
         <KPI
           label="Entrenos (7d)"
@@ -66,18 +59,16 @@ export default function Home() {
 
         {todayData?.menu && (
           <p style={styles.todayText}>
-            🍽️{' '}
-            {todayData.menu.lunch ||
-              'Plan alimenticio disponible'}
+            🍽️ {todayData.menu.lunch}
           </p>
         )}
       </div>
 
       {/* QUICK ACTIONS */}
       <div style={styles.actions}>
-        <Action label="Calendario" />
-        <Action label="Progreso" />
-        <Action label="Entrenos" />
+        <button>Calendario</button>
+        <button>Progreso</button>
+        <button>Entrenos</button>
       </div>
     </div>
   )
@@ -87,32 +78,63 @@ export default function Home() {
    COMPONENTS
 ====================== */
 
-function KPI({ label, value, accent }) {
+function KPI({ label, value, suffix = '', signed }) {
+  let accent = null
+  if (signed && typeof value === 'number') {
+    accent = value < 0 ? 'green' : value > 0 ? 'red' : null
+  }
+
   return (
     <div style={styles.kpi}>
       <span style={styles.kpiLabel}>{label}</span>
-      <strong
-        style={{
-          ...styles.kpiValue,
-          color:
-            accent === 'green'
-              ? 'var(--success)'
-              : accent === 'red'
-              ? 'var(--danger)'
-              : 'var(--text)'
-        }}
-      >
-        {value}
-      </strong>
+
+      {value === null || value === undefined ? (
+        <strong style={styles.kpiValue}>—</strong>
+      ) : (
+        <AnimatedNumber
+          value={value}
+          suffix={suffix}
+          accent={accent}
+          signed={signed}
+        />
+      )}
     </div>
   )
 }
 
-function Action({ label }) {
+function AnimatedNumber({
+  value,
+  suffix,
+  accent,
+  signed
+}) {
+  const motionValue = useMotionValue(value)
+
+  useEffect(() => {
+    animate(motionValue, value, {
+      duration: 0.35,
+      ease: 'easeOut'
+    })
+  }, [value, motionValue])
+
   return (
-    <div style={styles.action}>
-      <strong>{label}</strong>
-    </div>
+    <motion.strong
+      style={{
+        ...styles.kpiValue,
+        color:
+          accent === 'green'
+            ? 'var(--success)'
+            : accent === 'red'
+            ? 'var(--danger)'
+            : 'var(--text)'
+      }}
+    >
+      {motionValue
+        .get()
+        .toFixed(1)
+        .replace(/\.0$/, '')}
+      {suffix}
+    </motion.strong>
   )
 }
 
@@ -156,19 +178,20 @@ const styles = {
     marginTop: '16px'
   },
   kpi: {
-  background: 'var(--surface-3)',
-  borderRadius: '18px',
-  padding: '14px',
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '4px'
-},
+    background: 'var(--surface-3)',
+    borderRadius: '18px',
+    padding: '14px',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '6px'
+  },
   kpiLabel: {
     fontSize: '0.75rem',
     color: 'var(--muted)'
   },
   kpiValue: {
-    fontSize: '1.4rem'
+    fontSize: '1.4rem',
+    fontWeight: 700
   },
   todayCard: {
     marginTop: '24px',
@@ -184,12 +207,5 @@ const styles = {
     display: 'grid',
     gridTemplateColumns: 'repeat(3,1fr)',
     gap: '12px'
-  },
-  action: {
-    background: 'var(--surface-3)',
-    borderRadius: '16px',
-    padding: '16px',
-    textAlign: 'center'
-  },
-  
+  }
 }

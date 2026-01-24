@@ -27,7 +27,7 @@ export default function Progress() {
   if (data.length === 0) {
     return (
       <div className="view">
-        <h1>Progreso</h1>
+        <h1>PROGRESO</h1>
         <p>Aún no hay datos registrados</p>
       </div>
     )
@@ -36,16 +36,6 @@ export default function Progress() {
   const first = data[0].value
   const last = data[data.length - 1].value
   const totalDiff = (last - first).toFixed(1)
-
-  const last7 = data.slice(-7)
-  const weekDiff =
-    last7.length > 1
-      ? (last7[last7.length - 1].value -
-          last7[0].value
-        ).toFixed(1)
-      : '—'
-
-  const streak = calculateStreak(history)
 
   const values = data.map(d => d.value)
   const min = Math.min(...values)
@@ -65,71 +55,20 @@ export default function Progress() {
           value={`${totalDiff > 0 ? '+' : ''}${totalDiff} kg`}
           accent={totalDiff < 0 ? 'green' : 'red'}
         />
-        <KPI
-          label="Últimos 7 días"
-          value={
-            weekDiff === '—'
-              ? '—'
-              : `${weekDiff > 0 ? '+' : ''}${weekDiff} kg`
-          }
-          accent={weekDiff < 0 ? 'green' : 'red'}
-        />
-        <KPI
-          label="Racha"
-          value={`${streak} días`}
-        />
       </div>
 
       {/* CHART */}
       <div style={styles.chartCard}>
         <ResponsiveContainer width="100%" height={260}>
           <AreaChart data={data}>
-            <defs>
-              <linearGradient
-                id="weightGradient"
-                x1="0"
-                y1="0"
-                x2="0"
-                y2="1"
-              >
-                <stop
-                  offset="0%"
-                  stopColor="var(--primary)"
-                  stopOpacity={0.35}
-                />
-                <stop
-                  offset="100%"
-                  stopColor="var(--primary)"
-                  stopOpacity={0}
-                />
-              </linearGradient>
-            </defs>
-
-            <XAxis
-              dataKey="date"
-              tick={{ fontSize: 11 }}
-              axisLine={false}
-            />
-
-            <YAxis
-              domain={[
-                min - padding,
-                max + padding
-              ]}
-              tick={{ fontSize: 11 }}
-              axisLine={false}
-            />
-
-            <Tooltip content={<CustomTooltip />} />
-
+            <XAxis dataKey="date" tick={{ fontSize: 11 }} />
+            <YAxis domain={[min - padding, max + padding]} />
+            <Tooltip />
             <Area
               type="monotone"
               dataKey="value"
               stroke="var(--primary)"
-              strokeWidth={2.5}
-              fill="url(#weightGradient)"
-              dot={{ r: 3 }}
-              activeDot={{ r: 5 }}
+              fill="rgba(10,132,255,0.2)"
             />
           </AreaChart>
         </ResponsiveContainer>
@@ -150,10 +89,6 @@ export default function Progress() {
     </div>
   )
 }
-
-/* ======================
-   COMPONENTS
-====================== */
 
 function KPI({ label, value, accent }) {
   return (
@@ -176,53 +111,12 @@ function KPI({ label, value, accent }) {
   )
 }
 
-function CustomTooltip({ active, payload, label }) {
-  if (!active || !payload || !payload.length)
-    return null
-
-  return (
-    <div style={styles.tooltip}>
-      <span>{label}</span>
-      <strong>{payload[0].value} kg</strong>
-    </div>
-  )
-}
-
-/* ======================
-   HELPERS
-====================== */
-
 function formatDate(date) {
   return new Date(date).toLocaleDateString('es-ES', {
     day: 'numeric',
     month: 'short'
   })
 }
-
-function calculateStreak(history) {
-  if (history.length === 0) return 0
-
-  const dates = history
-    .map(h => new Date(h.date))
-    .sort((a, b) => b - a)
-
-  let streak = 1
-
-  for (let i = 1; i < dates.length; i++) {
-    const diff =
-      (dates[i - 1] - dates[i]) /
-      (1000 * 60 * 60 * 24)
-
-    if (diff === 1) streak++
-    else break
-  }
-
-  return streak
-}
-
-/* ======================
-   STYLES
-====================== */
 
 const styles = {
   kpis: {
@@ -232,32 +126,25 @@ const styles = {
     marginTop: '16px'
   },
   kpi: {
-  background: 'var(--surface-3)',
-  borderRadius: '18px',
-  padding: '28px',
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '4px'
-},
-
+    background: 'var(--surface-3)',
+    borderRadius: '18px',
+    padding: '20px',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '6px'
+  },
   kpiLabel: {
-    fontSize: '0.75rem',
+    fontSize: '1.5rem',
     color: 'var(--muted)'
   },
   kpiValue: {
-    fontSize: '1.8rem',
-    fontWeight: 700
+    fontSize: '1.6rem'
   },
   chartCard: {
     marginTop: '24px',
     background: 'var(--surface-3)',
     borderRadius: '20px',
     padding: '16px'
-  },
-  tooltip: {
-    background: 'var(--surface-2)',
-    padding: '10px',
-    borderRadius: '12px'
   },
   history: {
     marginTop: '26px',
