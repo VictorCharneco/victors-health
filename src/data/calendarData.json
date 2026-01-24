@@ -1,0 +1,516 @@
+{
+  "days": [
+    {
+      "date": "2026-01-26",
+      "type": "training",
+      "menu": {
+        "breakfast": "Yogur griego natural 0% (200 g) + manzana (150 g)",
+        "lunch": "Pechuga de pollo (180 g) a la plancha + patata cocida (250 g) + brócoli hervido (150 g)",
+        "dinner": "Tortilla de 2 huevos + claras extra (1) + ensalada de lechuga y tomate (100 g) con 1 cdita aceite",
+        "snack": "Yogur natural 0% (125 g) o plátano pequeño"
+      },
+      "exercises": [
+        { "name": "Flexión pica", "image": "images/pike_pushup.gif", "instructions": "Empuja con los hombros.", "sets": 3, "reps": 8 },
+        { "name": "Flexiones abiertas", "image": "images/pushup_wide.gif", "instructions": "Manos separadas, cuerpo recto.", "sets": 3, "reps": 10 },
+        { "name": "Superman", "image": "images/superman.gif", "instructions": "Aprieta la espalda.", "sets": 3, "reps": 12 }
+      ]
+    },
+    {
+      "date": "2026-01-27",
+      "type": "rest",
+      "menu": {
+        "breakfast": "2 huevos revueltos + pan integral (40 g)",
+        "lunch": "Lentejas cocidas (250 g) con arroz blanco (60 g en crudo)",
+        "dinner": "Filete de merluza congelada (180 g) al horno + calabacín (200 g)",
+        "snack": "Batido de proteína con agua"
+      }
+    },
+    {
+      "date": "2026-01-28",
+      "type": "training",
+      "menu": {
+        "breakfast": "Batido: leche semidesnatada (250 ml) + plátano",
+        "lunch": "Pavo fileteado (180 g) a la plancha + arroz blanco (70 g crudo)",
+        "dinner": "Tortilla francesa 2 huevos + ensalada verde (100 g)",
+        "snack": "Manzana o pera"
+      },
+      "exercises": [
+        { "name": "Flexión pica", "image": "images/pike_pushup.gif", "instructions": "Movimiento limpio.", "sets": 3, "reps": 8 },
+        { "name": "Plancha", "image": "images/plank.gif", "instructions": "Abdomen firme.", "sets": 3, "reps": 25 },
+        { "name": "Sentadillas", "image": "images/squat.gif", "instructions": "Talones apoyados.", "sets": 3, "reps": 15 }
+      ]
+    },
+    {
+      "date": "2026-01-29",
+      "type": "rest",
+      "menu": {
+        "breakfast": "Yogur natural (200 g) + kiwi",
+        "lunch": "Atún al natural (2 latas) + patata cocida (250 g)",
+        "dinner": "Crema de verduras casera (300 ml) + huevo cocido (1)",
+        "snack": "Yogur 0%"
+      }
+    },
+    {
+      "date": "2026-01-30",
+      "type": "training",
+      "menu": {
+        "breakfast": "2 huevos + naranja",
+        "lunch": "Pechuga de pollo (180 g) + arroz blanco (70 g crudo)",
+        "dinner": "Pescado blanco congelado (180 g) a la plancha + ensalada simple",
+        "snack": "Batido de proteína"
+      },
+      "exercises": [
+        { "name": "Flexión pica", "image": "images/pike_pushup.gif", "instructions": "Empuja fuerte.", "sets": 3, "reps": 8 },
+        { "name": "Superman", "image": "images/superman.gif", "instructions": "Espalda activa.", "sets": 3, "reps": 12 },
+        { "name": "Sentadillas", "image": "images/squat.gif", "instructions": "Ritmo constante.", "sets": 3, "reps": 15 }
+      ]
+    },
+
+    {
+      "date": "2026-01-31",
+      "type": "rest",
+      "menu": {
+        "breakfast": "Libre controlado",
+        "lunch": "Libre controlado",
+        "dinner": "Sopa o verdura",
+        "snack": "Opcional"
+      }
+    },
+    {
+      "date": "2026-02-01",
+      "type": "rest",
+      "menu": {
+        "breakfast": "Libre",
+        "lunch": "Libre",
+        "dinner": "Ligero",
+        "snack": "Opcional"
+      }
+    },
+    {
+      "date": "2026-02-02",
+      "type": "training",
+      "menu": {
+        "breakfast": "Yogur griego 0% (200 g) + manzana",
+        "lunch": "Pollo a la plancha (180 g) + patata al horno (250 g)",
+        "dinner": "Tortilla 2 huevos + ensalada básica",
+        "snack": "Yogur natural"
+      },
+      "exercises": [
+        { "name": "Flexión pica", "image": "images/pike_pushup.gif", "instructions": "Empuje vertical.", "sets": 3, "reps": 8 },
+        { "name": "Flexiones abiertas", "image": "images/pushup_wide.gif", "instructions": "Cuerpo recto.", "sets": 3, "reps": 10 },
+        { "name": "Superman", "image": "images/superman.gif", "instructions": "Aprieta espalda.", "sets": 3, "reps": 12 }
+      ]
+    },
+    {
+      "date": "2026-02-03",
+      "type": "rest",
+      "menu": {
+        "breakfast": "Huevos revueltos (2)",
+        "lunch": "Lentejas cocidas (250 g)",
+        "dinner": "Merluza al horno (180 g)",
+        "snack": "Batido proteína"
+      }
+    },
+    {
+      "date": "2026-02-04",
+      "type": "training",
+      "menu": {
+        "breakfast": "Batido de leche + plátano",
+        "lunch": "Pavo a la plancha (180 g) + arroz blanco (70 g crudo)",
+        "dinner": "Tortilla francesa (2 huevos)",
+        "snack": "Fruta"
+      },
+      "exercises": [
+        { "name": "Flexión pica", "image": "images/pike_pushup.gif", "instructions": "Control total.", "sets": 3, "reps": 8 },
+        { "name": "Plancha", "image": "images/plank.gif", "instructions": "Core activo.", "sets": 3, "reps": 25 },
+        { "name": "Sentadillas", "image": "images/squat.gif", "instructions": "Base corporal.", "sets": 3, "reps": 15 }
+      ]
+    },
+    {
+      "date": "2026-02-05",
+      "type": "rest",
+      "menu": {
+        "breakfast": "Yogur natural",
+        "lunch": "Atún natural (2 latas)",
+        "dinner": "Verduras salteadas (200 g)",
+        "snack": "Yogur"
+      }
+    },
+    {
+      "date": "2026-02-06",
+      "type": "training",
+      "menu": {
+        "breakfast": "Huevos (2)",
+        "lunch": "Pollo a la plancha (180 g) + arroz blanco (70 g crudo)",
+        "dinner": "Pescado blanco (180 g)",
+        "snack": "Batido proteína"
+      },
+      "exercises": [
+        { "name": "Flexión pica", "image": "images/pike_pushup.gif", "instructions": "Empuje fuerte.", "sets": 3, "reps": 8 },
+        { "name": "Superman", "image": "images/superman.gif", "instructions": "Espalda activa.", "sets": 3, "reps": 12 },
+        { "name": "Sentadillas", "image": "images/squat.gif", "instructions": "Ritmo constante.", "sets": 3, "reps": 15 }
+      ]
+    },
+    {
+      "date": "2026-02-07",
+      "type": "rest",
+      "menu": {
+        "breakfast": "Libre",
+        "lunch": "Libre",
+        "dinner": "Ligero",
+        "snack": "Opcional"
+      }
+    },
+    {
+      "date": "2026-02-08",
+      "type": "rest",
+      "menu": {
+        "breakfast": "Libre",
+        "lunch": "Libre",
+        "dinner": "Ligero",
+        "snack": "Opcional"
+      }
+    },
+{
+  "date": "2026-02-09",
+  "type": "training",
+  "menu": {
+    "breakfast": "Yogur griego 0% (200 g) + pera (150 g)",
+    "lunch": "Pechuga de pollo (180 g) a la plancha + patata cocida (250 g) + zanahoria hervida (150 g)",
+    "dinner": "Tortilla francesa (2 huevos) + ensalada de lechuga y tomate (100 g)",
+    "snack": "Yogur natural 0% (125 g)"
+  },
+  "exercises": [
+    { "name": "Flexión pica", "image": "images/pike_pushup.gif", "instructions": "Empuje vertical.", "sets": 3, "reps": 8 },
+    { "name": "Flexiones abiertas", "image": "images/pushup_wide.gif", "instructions": "Empuje completo.", "sets": 3, "reps": 10 },
+    { "name": "Superman", "image": "images/superman.gif", "instructions": "Espalda fuerte.", "sets": 3, "reps": 12 }
+  ]
+},
+{
+  "date": "2026-02-10",
+  "type": "rest",
+  "menu": {
+    "breakfast": "2 huevos revueltos + pan integral (40 g)",
+    "lunch": "Lentejas cocidas (250 g) con arroz blanco (60 g crudo)",
+    "dinner": "Merluza congelada (180 g) al horno + calabacín (200 g)",
+    "snack": "Batido de proteína con agua"
+  }
+},
+{
+  "date": "2026-02-11",
+  "type": "training",
+  "menu": {
+    "breakfast": "Batido: leche semidesnatada (250 ml) + plátano",
+    "lunch": "Pavo a la plancha (180 g) + arroz blanco (70 g crudo)",
+    "dinner": "Tortilla francesa (2 huevos)",
+    "snack": "Manzana"
+  },
+  "exercises": [
+    { "name": "Flexión pica", "image": "images/pike_pushup.gif", "instructions": "Control total.", "sets": 3, "reps": 8 },
+    { "name": "Plancha", "image": "images/plank.gif", "instructions": "Core firme.", "sets": 3, "reps": 25 },
+    { "name": "Sentadillas", "image": "images/squat.gif", "instructions": "Base corporal.", "sets": 3, "reps": 15 }
+  ]
+},
+{
+  "date": "2026-02-12",
+  "type": "rest",
+  "menu": {
+    "breakfast": "Yogur natural (200 g) + kiwi",
+    "lunch": "Atún al natural (2 latas) + patata cocida (250 g)",
+    "dinner": "Verduras salteadas (200 g) con 1 huevo",
+    "snack": "Yogur 0%"
+  }
+},
+{
+  "date": "2026-02-13",
+  "type": "training",
+  "menu": {
+    "breakfast": "2 huevos + naranja",
+    "lunch": "Pechuga de pollo (180 g) + arroz blanco (70 g crudo)",
+    "dinner": "Pescado blanco (180 g) a la plancha",
+    "snack": "Batido de proteína"
+  },
+  "exercises": [
+    { "name": "Flexión pica", "image": "images/pike_pushup.gif", "instructions": "Empuje fuerte.", "sets": 3, "reps": 8 },
+    { "name": "Superman", "image": "images/superman.gif", "instructions": "Espalda activa.", "sets": 3, "reps": 12 },
+    { "name": "Sentadillas", "image": "images/squat.gif", "instructions": "Ritmo constante.", "sets": 3, "reps": 15 }
+  ]
+},
+{
+  "date": "2026-02-14",
+  "type": "rest",
+  "menu": {
+    "breakfast": "Libre controlado",
+    "lunch": "Libre controlado",
+    "dinner": "Sopa o verdura",
+    "snack": "Opcional"
+  }
+},
+{
+  "date": "2026-02-15",
+  "type": "rest",
+  "menu": {
+    "breakfast": "Libre",
+    "lunch": "Libre",
+    "dinner": "Ligero",
+    "snack": "Opcional"
+  }
+},
+{
+  "date": "2026-02-16",
+  "type": "training",
+  "menu": {
+    "breakfast": "Yogur griego 0% (200 g) + manzana",
+    "lunch": "Pollo a la plancha (180 g) + patata al horno (250 g)",
+    "dinner": "Tortilla (2 huevos) + ensalada básica",
+    "snack": "Yogur natural"
+  },
+  "exercises": [
+    { "name": "Flexión pica", "image": "images/pike_pushup.gif", "instructions": "Empuje vertical.", "sets": 3, "reps": 8 },
+    { "name": "Flexiones abiertas", "image": "images/pushup_wide.gif", "instructions": "Empuje completo.", "sets": 3, "reps": 10 },
+    { "name": "Superman", "image": "images/superman.gif", "instructions": "Espalda fuerte.", "sets": 3, "reps": 12 }
+  ]
+},
+{
+  "date": "2026-02-17",
+  "type": "rest",
+  "menu": {
+    "breakfast": "Huevos revueltos (2)",
+    "lunch": "Lentejas cocidas (250 g)",
+    "dinner": "Merluza al horno (180 g)",
+    "snack": "Batido de proteína"
+  }
+},
+{
+  "date": "2026-02-18",
+  "type": "training",
+  "menu": {
+    "breakfast": "Batido de leche + plátano",
+    "lunch": "Pavo a la plancha (180 g) + arroz blanco (70 g crudo)",
+    "dinner": "Tortilla francesa (2 huevos)",
+    "snack": "Fruta"
+  },
+  "exercises": [
+    { "name": "Flexión pica", "image": "images/pike_pushup.gif", "instructions": "Control total.", "sets": 3, "reps": 8 },
+    { "name": "Plancha", "image": "images/plank.gif", "instructions": "Core firme.", "sets": 3, "reps": 25 },
+    { "name": "Sentadillas", "image": "images/squat.gif", "instructions": "Base corporal.", "sets": 3, "reps": 15 }
+  ]
+},
+{
+  "date": "2026-02-19",
+  "type": "rest",
+  "menu": {
+    "breakfast": "Yogur natural",
+    "lunch": "Atún natural (2 latas)",
+    "dinner": "Verduras salteadas (200 g)",
+    "snack": "Yogur"
+  }
+},
+{
+  "date": "2026-02-20",
+  "type": "training",
+  "menu": {
+    "breakfast": "2 huevos + naranja",
+    "lunch": "Pollo a la plancha (180 g) + arroz blanco (70 g crudo)",
+    "dinner": "Pescado blanco (180 g)",
+    "snack": "Batido de proteína"
+  },
+  "exercises": [
+    { "name": "Flexión pica", "image": "images/pike_pushup.gif", "instructions": "Empuje fuerte.", "sets": 3, "reps": 8 },
+    { "name": "Superman", "image": "images/superman.gif", "instructions": "Espalda activa.", "sets": 3, "reps": 12 },
+    { "name": "Sentadillas", "image": "images/squat.gif", "instructions": "Ritmo constante.", "sets": 3, "reps": 15 }
+  ]
+},
+{
+  "date": "2026-02-21",
+  "type": "rest",
+  "menu": {
+    "breakfast": "Libre",
+    "lunch": "Libre",
+    "dinner": "Ligero",
+    "snack": "Opcional"
+  }
+},
+{
+  "date": "2026-02-22",
+  "type": "rest",
+  "menu": {
+    "breakfast": "Libre",
+    "lunch": "Libre",
+    "dinner": "Ligero",
+    "snack": "Opcional"
+  }
+},
+{
+  "date": "2026-02-23",
+  "type": "training",
+  "menu": {
+    "breakfast": "Yogur griego 0% (200 g) + pera",
+    "lunch": "Pollo (180 g) + patata cocida (250 g) + brócoli (150 g)",
+    "dinner": "Tortilla (2 huevos) + ensalada básica",
+    "snack": "Yogur"
+  },
+  "exercises": [
+    { "name": "Flexión pica", "image": "images/pike_pushup.gif", "instructions": "Empuje vertical.", "sets": 3, "reps": 8 },
+    { "name": "Flexiones abiertas", "image": "images/pushup_wide.gif", "instructions": "Empuje completo.", "sets": 3, "reps": 10 },
+    { "name": "Superman", "image": "images/superman.gif", "instructions": "Espalda fuerte.", "sets": 3, "reps": 12 }
+  ]
+},
+{
+  "date": "2026-02-24",
+  "type": "rest",
+  "menu": {
+    "breakfast": "Huevos (2)",
+    "lunch": "Lentejas cocidas (250 g)",
+    "dinner": "Pescado blanco (180 g)",
+    "snack": "Batido"
+  }
+},
+{
+  "date": "2026-02-25",
+  "type": "training",
+  "menu": {
+    "breakfast": "Batido de leche + plátano",
+    "lunch": "Pavo (180 g) + arroz blanco (70 g crudo)",
+    "dinner": "Tortilla francesa (2 huevos)",
+    "snack": "Fruta"
+  },
+  "exercises": [
+    { "name": "Flexión pica", "image": "images/pike_pushup.gif", "instructions": "Control total.", "sets": 3, "reps": 8 },
+    { "name": "Plancha", "image": "images/plank.gif", "instructions": "Core firme.", "sets": 3, "reps": 25 },
+    { "name": "Sentadillas", "image": "images/squat.gif", "instructions": "Base corporal.", "sets": 3, "reps": 15 }
+  ]
+},
+{
+  "date": "2026-02-26",
+  "type": "rest",
+  "menu": {
+    "breakfast": "Yogur",
+    "lunch": "Atún natural (2 latas)",
+    "dinner": "Verduras salteadas (200 g)",
+    "snack": "Yogur"
+  }
+},
+{
+  "date": "2026-02-27",
+  "type": "training",
+  "menu": {
+    "breakfast": "2 huevos + naranja",
+    "lunch": "Pollo (180 g) + arroz blanco (70 g crudo)",
+    "dinner": "Pescado blanco (180 g)",
+    "snack": "Batido de proteína"
+  },
+  "exercises": [
+    { "name": "Flexión pica", "image": "images/pike_pushup.gif", "instructions": "Empuje fuerte.", "sets": 3, "reps": 8 },
+    { "name": "Superman", "image": "images/superman.gif", "instructions": "Espalda activa.", "sets": 3, "reps": 12 },
+    { "name": "Sentadillas", "image": "images/squat.gif", "instructions": "Ritmo constante.", "sets": 3, "reps": 15 }
+  ]
+},
+{
+  "date": "2026-02-28",
+  "type": "rest",
+  "menu": {
+    "breakfast": "Libre",
+    "lunch": "Libre",
+    "dinner": "Ligero",
+    "snack": "Opcional"
+  }
+},
+{
+  "date": "2026-03-01",
+  "type": "rest",
+  "menu": {
+    "breakfast": "Libre",
+    "lunch": "Libre",
+    "dinner": "Ligero",
+    "snack": "Opcional"
+  }
+},
+{
+  "date": "2026-03-02",
+  "type": "training",
+  "menu": {
+    "breakfast": "Yogur griego 0% (200 g) + manzana",
+    "lunch": "Pollo (180 g) + patata cocida (250 g) + zanahoria (150 g)",
+    "dinner": "Tortilla (2 huevos) + ensalada básica",
+    "snack": "Yogur"
+  },
+  "exercises": [
+    { "name": "Flexión pica", "image": "images/pike_pushup.gif", "instructions": "Empuje vertical.", "sets": 3, "reps": 8 },
+    { "name": "Flexiones abiertas", "image": "images/pushup_wide.gif", "instructions": "Empuje completo.", "sets": 3, "reps": 10 },
+    { "name": "Superman", "image": "images/superman.gif", "instructions": "Espalda fuerte.", "sets": 3, "reps": 12 }
+  ]
+},
+{
+  "date": "2026-03-03",
+  "type": "rest",
+  "menu": {
+    "breakfast": "Huevos (2)",
+    "lunch": "Lentejas cocidas (250 g)",
+    "dinner": "Pescado blanco (180 g)",
+    "snack": "Batido"
+  }
+},
+{
+  "date": "2026-03-04",
+  "type": "training",
+  "menu": {
+    "breakfast": "Batido de leche + plátano",
+    "lunch": "Pavo (180 g) + arroz blanco (70 g crudo)",
+    "dinner": "Tortilla francesa (2 huevos)",
+    "snack": "Fruta"
+  },
+  "exercises": [
+    { "name": "Flexión pica", "image": "images/pike_pushup.gif", "instructions": "Control total.", "sets": 3, "reps": 8 },
+    { "name": "Plancha", "image": "images/plank.gif", "instructions": "Core firme.", "sets": 3, "reps": 25 },
+    { "name": "Sentadillas", "image": "images/squat.gif", "instructions": "Base corporal.", "sets": 3, "reps": 15 }
+  ]
+},
+{
+  "date": "2026-03-05",
+  "type": "rest",
+  "menu": {
+    "breakfast": "Yogur",
+    "lunch": "Atún natural (2 latas)",
+    "dinner": "Verduras salteadas (200 g)",
+    "snack": "Yogur"
+  }
+},
+{
+  "date": "2026-03-06",
+  "type": "training",
+  "menu": {
+    "breakfast": "2 huevos + naranja",
+    "lunch": "Pollo (180 g) + arroz blanco (70 g crudo)",
+    "dinner": "Pescado blanco (180 g)",
+    "snack": "Batido de proteína"
+  },
+  "exercises": [
+    { "name": "Flexión pica", "image": "images/pike_pushup.gif", "instructions": "Empuje fuerte.", "sets": 3, "reps": 8 },
+    { "name": "Superman", "image": "images/superman.gif", "instructions": "Espalda activa.", "sets": 3, "reps": 12 },
+    { "name": "Sentadillas", "image": "images/squat.gif", "instructions": "Ritmo constante.", "sets": 3, "reps": 15 }
+  ]
+},
+{
+  "date": "2026-03-07",
+  "type": "rest",
+  "menu": {
+    "breakfast": "Libre",
+    "lunch": "Libre",
+    "dinner": "Ligero",
+    "snack": "Opcional"
+  }
+},
+{
+  "date": "2026-03-08",
+  "type": "rest",
+  "menu": {
+    "breakfast": "Libre",
+    "lunch": "Libre",
+    "dinner": "Ligero",
+    "snack": "Opcional"
+  }
+}
+
+  ]
+}

@@ -1,35 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { AnimatePresence, motion } from 'framer-motion'
 
-function App() {
-  const [count, setCount] = useState(0)
+import Home from './views/Home'
+import Calendar from './views/Calendar'
+import Progress from './views/Progress'
+import BottomNav from './components/BottomNav'
+
+export default function App() {
+  const location = useLocation()
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="app">
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route
+            path="/"
+            element={<Page><Home /></Page>}
+          />
+          <Route
+            path="/calendar"
+            element={<Page><Calendar /></Page>}
+          />
+          <Route
+            path="/progress"
+            element={<Page><Progress /></Page>}
+          />
+        </Routes>
+      </AnimatePresence>
+
+      <BottomNav />
+    </div>
   )
 }
 
-export default App
+/* ======================
+   PAGE WRAPPER
+====================== */
+
+function Page({ children }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -16 }}
+      transition={{
+        duration: 0.28,
+        ease: 'easeOut'
+      }}
+      style={{ flex: 1 }}
+    >
+      {children}
+    </motion.div>
+  )
+}

@@ -1,0 +1,28 @@
+:root {
+  /* Background */
+  --bg: #000000;
+
+  /* Surfaces */
+  --surface-1: #0b0b0d;
+  --surface-2: #111114;
+  --surface-3: #1c1c1f;
+
+  /* Shadows (muy suaves) */
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --shadow-strong: 0 16px 40px rgba(0, 0, 0, 0.7);
+
+  /* Colors */
+  --primary: #0a84ff;   /* Apple blue */
+  --success: #30d158;   /* Apple green */
+  --danger: #ff453a;
+
+  /* Text */
+  --text: #f5f5f7;
+  --muted: #8e8e93;
+
+  /* Radius */
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-xl: 28px;
+}
